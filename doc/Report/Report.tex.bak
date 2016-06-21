@@ -1,0 +1,57 @@
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[brazil]{babel}
+\title{\textbf{Um Estudo dos Algoritmos de Árvore Geradora Mínima}}
+\author{Lucas Assunção\\Thiago Vieira}
+\date{}
+\begin{document}
+
+\maketitle
+
+\section{Introdução}
+Neste trabalho iremos estudar o problema da árvore geradora mínima, mostrar os diferentes algoritmos para resolver o problema e uma formulação multifluxo de programação linear.\\
+% TODO: Falar mais coisas aqui.
+
+
+\section{Problema}
+Dado um grafo não direcionado G(V, E) e arestas E(U, V, W) ligando U a V com pesos reais W, o problema da árvore geradora mínima busca um subgrafo conexo G'
+% TODO: Explicar o problema da arvore geradora minima
+
+\subsection{Aplicações}
+
+
+
+\section{Algoritmos}
+
+    \subsection{Kruskal}
+    
+    \subsection{Prim}
+    
+    \subsection{Borůvka}
+        \subsubsection{Iterativo}
+                
+        \subsubsection{Paralelo}
+
+
+
+
+\section{Resultados Experimentais}
+
+
+\section{Conclusão}
+
+
+
+
+
+
+Para o trabalho de teoria dos grafos, iremos implementar algoritmos que calculam a árvore geradora mínima de um grafo, explicar como funciona cada um e comparar seus resultados para algumas classes de grafos. Segue os algoritmos que analisaremos:\\
+\begin{enumerate}
+\item Kruskal
+\item Prim
+\item Borůvka, versão sequencial iterativa
+\item Borůvka, versão em paralelo
+\end{enumerate}
+
+
+\end{document}

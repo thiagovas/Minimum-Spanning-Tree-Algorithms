@@ -8,13 +8,14 @@ typedef long long int ll;
 
 typedef struct sEdge{
   sEdge(){}
-  sEdge(int _u, int _v, int _w)
+  sEdge(int _u, int _v, double _w)
   {
     u = _u;
     v = _v;
     w = _w;
   }
-  int u, v, w;
+  int u, v;
+  double w;
 } edge;
 
 int muf[MAX];
@@ -40,7 +41,8 @@ int main()
 {
   ios::sync_with_stdio(false);  cin.tie(0);  cout.tie(0);
   
-  int n, m, u, v, w;
+  int n, m, u, v;
+  double w;
   vector<edge> ve;
   
   cin >> n >> m;
