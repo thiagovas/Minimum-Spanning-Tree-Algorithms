@@ -3,7 +3,7 @@ using namespace std;
 
 #define endl "\n"
 #define INF 0x3f3f3f3f
-#define MAX 1000000
+#define MAX 10000000
 typedef long long int ll;
 
 typedef struct sEdge{
@@ -62,6 +62,7 @@ int main()
       cout << ve[i].u << " " << ve[i].v << endl;
     }
   }
+  cout << "Weight: " << finalWeight << endl;
   
   return 0;
 }

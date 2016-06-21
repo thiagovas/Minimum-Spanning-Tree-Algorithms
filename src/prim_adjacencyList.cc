@@ -2,7 +2,7 @@
 using namespace std;
 
 #define endl "\n"
-#define MAX 1000000
+#define MAX 10000000
 #define INF 0x3f3f3f3f
 typedef long long int ll;
 
@@ -24,14 +24,13 @@ int main()
     graph[v].push_back(make_pair(w, u));
   }
   
-
+  ll finalWeight = 0;
   memset(connected, false, sizeof(connected));
   for(int i = 0; i < n; i++)
   {
     if(connected[i]) continue;
     connected[i]=true;
     
-
     set<pair<pair<int, int>, int> > tempEdges;
     for(unsigned j = 0; j < graph[i].size(); j++) tempEdges.insert(make_pair(graph[i][j], i));
     
@@ -47,9 +46,11 @@ int main()
           if(not connected[graph[edge.first.second][j].second])
             tempEdges.insert(make_pair(graph[edge.first.second][j], edge.first.second));
         cout << edge.second+1 << " " << edge.first.second+1 << endl;
+        finalWeight += edge.first.first;
       }
     }
   }
+  cout << "Weight: " << finalWeight << endl;
   
   return 0;
 }
