@@ -15,7 +15,7 @@ int main()
   int n, m, u, v;
   double w;
   int edgeCount=0;
-  vector<vector<pair<int, int> > > graph;
+  vector<vector<pair<double, int> > > graph;
   
   cin >> n >> m;
   graph.resize(n);

@@ -49,7 +49,8 @@ int main()
   while(edges < n-1)
   {
     // Index and value of the next possible edge to be added to the mst.
-    int edgeIndex=-1, edgeValue=INF;
+    int edgeIndex=-1;
+    double edgeValue=INF;
     for(unsigned i = 0; i < relativePosition.size(); i++)
     {
       int index=relativePosition[i];
@@ -71,6 +72,7 @@ int main()
     if(Find(u) != Find(v))
     {
       Union(u, v);
+      edges++;
       finalWeight += graph[edgeIndex][relativePosition[edgeIndex]].second;
       cout << u << " " << v << endl;
     }
