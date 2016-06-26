@@ -5,6 +5,7 @@ using namespace std;
 #define INF 0x3f3f3f3f
 #define MAX 10000000
 typedef long long int ll;
+typedef long double ld;
 
 int muf[MAX];
 
@@ -43,7 +44,7 @@ int main()
   relativePosition.assign(n, 0);
   
   int edges=0;
-  ll finalWeight = 0;
+  ld finalWeight = 0;
   while(edges < n-1)
   {
     // Index and value of the next possible edge to be added to the mst.
@@ -75,7 +76,7 @@ int main()
     
     relativePosition[edgeIndex]++;
   }
-  cout << "Weight: " << finalWeight << endl;
+  cout << "Weight: " << std::fixed << std::setprecision(8) << finalWeight << endl;
   
   return 0;
 }

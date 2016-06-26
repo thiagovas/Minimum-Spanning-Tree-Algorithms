@@ -5,6 +5,7 @@ using namespace std;
 #define INF 0x3f3f3f3f
 #define MAX 10000000
 typedef long long int ll;
+typedef long double ld;
 
 typedef struct sEdge{
   sEdge(){}
@@ -54,7 +55,7 @@ int main()
   }
   sort(ve.begin(), ve.end(), comp);
   
-  ll finalWeight=0;
+  ld finalWeight=0;
   for(unsigned i = 0; i < ve.size(); i++)
   {
     if(Find(ve[i].v) != Find(ve[i].u))
@@ -64,7 +65,7 @@ int main()
       cout << ve[i].u << " " << ve[i].v << endl;
     }
   }
-  cout << "Weight: " << finalWeight << endl;
+  cout << "Weight: " << std::fixed << std::setprecision(8) << finalWeight << endl;
   
   return 0;
 }

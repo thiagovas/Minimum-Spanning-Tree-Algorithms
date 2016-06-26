@@ -14,6 +14,7 @@
 #define MAX 10000000
 #define INF 0x3f3f3f3f
 typedef long long int ll;
+typedef long double ld;
 
 bool connected[MAX];
 
@@ -41,7 +42,7 @@ int main()
     graph[v].push_back(std::make_pair(w, u));
   }
   
-  ll finalWeight = 0;
+  ld finalWeight = 0;
   memset(connected, false, sizeof(connected));
   for(int i = 0; i < n; i++)
   {
@@ -67,7 +68,7 @@ int main()
       }
     }
   }
-  std::cout << "Weight: " << finalWeight << std::endl;
+  std::cout << "Weight: " << std::fixed << std::setprecision(8) << finalWeight << std::endl;
   
   return 0;
 }
