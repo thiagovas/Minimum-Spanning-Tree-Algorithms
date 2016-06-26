@@ -12,8 +12,8 @@ from random import randint
 def genComplete(n):
   m = n*(n-1)/2
   print str(n) + ' ' + str(m)
-  for i in range(1, n+1):
-    for j in range(i+1, n+1):
+  for i in range(0, n):
+    for j in range(i+1, n):
       print str(i) + ' ' + str(j) + ' ' + str(randint(1, 100))
   
 

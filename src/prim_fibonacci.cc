@@ -18,7 +18,7 @@ typedef long long int ll;
 bool connected[MAX];
 
 struct compare_edge {
-  bool operator()(const std::pair<std::pair<int, int>, int> &a, const std::pair<std::pair<int, int>, int> &b) const
+  bool operator()(const std::pair<std::pair<double, int>, int> &a, const std::pair<std::pair<double, int>, int> &b) const
   {
     return a.first.first > b.first.first;
   }
@@ -27,8 +27,10 @@ struct compare_edge {
 int main()
 {
   std::ios::sync_with_stdio(false);  std::cin.tie(0);  std::cout.tie(0);
-  int n, m, u, v, w, edgeCount=0;
-  std::vector<std::vector<std::pair<int, int> > > graph;
+  int n, m, u, v;
+  double w;
+  int edgeCount=0;
+  std::vector<std::vector<std::pair<double, int> > > graph;
   
   std::cin >> n >> m;
   graph.resize(n);
@@ -46,12 +48,12 @@ int main()
     if(connected[i]) continue;
     connected[i]=true;
     
-    boost::heap::fibonacci_heap<std::pair<std::pair<int, int>, int>, boost::heap::compare<compare_edge> > tempEdges;
+    boost::heap::fibonacci_heap<std::pair<std::pair<double, int>, int>, boost::heap::compare<compare_edge> > tempEdges;
     for(unsigned j = 0; j < graph[i].size(); j++) tempEdges.push(std::make_pair(graph[i][j], i));
     
     while(not tempEdges.empty() && edgeCount+1 < n)
     {
-      std::pair<std::pair<int, int>, int> edge = tempEdges.top();
+      std::pair<std::pair<double, int>, int> edge = tempEdges.top();
       tempEdges.pop();
       if(not connected[edge.first.second])
       {

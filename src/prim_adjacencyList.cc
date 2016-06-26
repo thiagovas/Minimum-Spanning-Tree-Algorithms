@@ -11,7 +11,9 @@ bool connected[MAX];
 int main()
 {
   ios::sync_with_stdio(false);  cin.tie(0);  cout.tie(0);
-  int n, m, u, v, w, edgeCount=0;
+  int n, m, u, v;
+  double w;
+  int edgeCount=0;
   vector<vector<pair<int, int> > > graph;
   
   cin >> n >> m;
@@ -30,12 +32,12 @@ int main()
     if(connected[i]) continue;
     connected[i]=true;
     
-    set<pair<pair<int, int>, int> > tempEdges;
+    set<pair<pair<double, int>, int> > tempEdges;
     for(unsigned j = 0; j < graph[i].size(); j++) tempEdges.insert(make_pair(graph[i][j], i));
     
     while(not tempEdges.empty() && edgeCount+1 < n)
     {
-      pair<pair<int, int>, int> edge = *tempEdges.begin();
+      pair<pair<double, int>, int> edge = *tempEdges.begin();
       tempEdges.erase(tempEdges.begin());
       if(not connected[edge.first.second])
       {
