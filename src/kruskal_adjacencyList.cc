@@ -18,15 +18,16 @@ int Find(int a)
 void Union(int a, int b)
 { muf[Find(a)] = Find(b); }
 
-bool comp(const pair<int, int> &a, const pair<int, int> &b)
+bool comp(const pair<int, double> &a, const pair<int, double> &b)
 { return a.second < b.second; }
 
 
 int main()
 {
   ios::sync_with_stdio(false);  cin.tie(0);  cout.tie(0);
-  int n, m, u, v, w;
-  vector<vector<pair<int, int> > > graph;
+  int n, m, u, v;
+  double w;
+  vector<vector<pair<int, double> > > graph;
   vector<int> relativePosition;
   
   cin >> n >> m;
