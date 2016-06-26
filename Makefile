@@ -1,10 +1,10 @@
-CC=g++-4.8
+CC=g++
 BIN_FOLDER=./bin
 SRC_FOLDER=./src
 OP=-Wall -O2
 
 
-build: prep kruskal_edgeList prim_adjacencyList kruskal_adjacencyList prim_edgeList
+build: prep kruskal_edgeList prim_adjacencyList kruskal_adjacencyList prim_fibonacci
 
 kruskal_edgeList:
 	$(CC) $(SRC_FOLDER)/kruskal_edgeList.cc -o $(BIN_FOLDER)/kruskal_edgeList $(OP)
