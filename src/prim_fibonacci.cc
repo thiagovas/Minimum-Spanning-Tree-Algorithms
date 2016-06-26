@@ -35,7 +35,6 @@ int main()
   while(m--)
   {
     std::cin >> u >> v >> w;
-    u--;  v--;
     graph[u].push_back(std::make_pair(w, v));
     graph[v].push_back(std::make_pair(w, u));
   }
@@ -61,7 +60,7 @@ int main()
         for(unsigned j = 0; j < graph[edge.first.second].size(); j++)
           if(not connected[graph[edge.first.second][j].second])
             tempEdges.push(std::make_pair(graph[edge.first.second][j], edge.first.second));
-        std::cout << edge.second+1 << " " << edge.first.second+1 << std::endl;
+        std::cout << edge.second << " " << edge.first.second << std::endl;
         finalWeight += edge.first.first;
       }
     }

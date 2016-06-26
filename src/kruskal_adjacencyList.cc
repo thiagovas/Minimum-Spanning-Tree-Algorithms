@@ -35,7 +35,6 @@ int main()
   {
     cin >> u >> v >> w;
     
-    // 0-based???
     graph[u].push_back(make_pair(v, w));
     graph[v].push_back(make_pair(u, w));
   }

@@ -19,7 +19,6 @@ int main()
   while(m--)
   {
     cin >> u >> v >> w;
-    u--;  v--;
     graph[u].push_back(make_pair(w, v));
     graph[v].push_back(make_pair(w, u));
   }
@@ -45,7 +44,7 @@ int main()
         for(unsigned j = 0; j < graph[edge.first.second].size(); j++)
           if(not connected[graph[edge.first.second][j].second])
             tempEdges.insert(make_pair(graph[edge.first.second][j], edge.first.second));
-        cout << edge.second+1 << " " << edge.first.second+1 << endl;
+        cout << edge.second << " " << edge.first.second << endl;
         finalWeight += edge.first.first;
       }
     }
